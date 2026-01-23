@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logs_analysis_agent"
+version = "0.1.0"
+description = "Elasticsearch Log Analysis Agent with LangChain/LangGraph for K3s RCA"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "langchain>=0.3.0",
+    "langgraph>=0.1.0",
+    "langchain-elasticsearch>=0.3.0",
+    "langchain-community>=0.0.10",
+    "elasticsearch>=8.15.0",
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "httpx>=0.25.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0",
+    "flake8>=6.0",
+]
